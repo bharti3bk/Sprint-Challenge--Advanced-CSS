@@ -1,0 +1,83 @@
+@import "variables.less";
+@import "mixins.less";
+
+@media (min-width: @desktop-min-width) {
+  main {
+    padding: @content-padding;
+    .space-images {
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        .img-mixin(15px, 30%, 100%);
+      }
+    }
+
+    .walk {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      div.walk-text,
+      div.walk-img {
+        width: 47%;
+
+        p {
+          font-size: 80%;
+        }
+
+        .btn {
+          background-color: #22283a;
+          color: whitesmoke;
+          width: 100px;
+          padding: 1%;
+          text-align: center;
+          border-radius: 7px;
+        }
+      }
+
+      img {
+        .img-mixin(7px, 47%, 100%);
+      }
+    }
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .space-images {
+    img.blast {
+      .img-mixin(10px, 100%, 70%);
+    }
+
+    img.sky {
+      display: none;
+    }
+
+    img.launch {
+      display: none;
+    }
+  }   
+
+  .walk {
+       
+    display: flex;
+    flex-direction: column-reverse; 
+    padding: 0px;
+
+    div {
+        width:100%;
+    }
+    img {
+        .img-mixin(7px, 100%, 100%);
+    }
+
+    .btn {
+        background-color: #22283a;
+        color: whitesmoke;
+        width: 100%;
+        padding: 5%;
+        text-align: center;
+        border-radius: 7px;
+      }
+  }
+}
