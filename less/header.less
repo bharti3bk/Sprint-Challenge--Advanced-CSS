@@ -1,0 +1,25 @@
+@import "variables.less";
+@import "mixins.less";
+
+@media (min-width: @desktop-min-width) {
+    header {
+        padding: @content-padding;
+
+        img {
+            .img-mixin(7px,100%,100%);
+        }
+    }
+}
+
+@media (max-width: @mobile-width) {
+
+     header {
+           
+        img{
+             
+            .img-mixin(7px,100%, 100%);
+        }
+     }
+}
+
+
